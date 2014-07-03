@@ -3,7 +3,6 @@ site.views.DriverAndCar = Backbone.View.extend({
     driverTemplate: '',                                                 //Deze variabele wordt later gebruikt om alle HTML uit de template te halen en moet daarom alvast aangemaakt worden
     errorTemplate: '',                                                  //Deze variabele wordt later gebruikt om alle HTML uit de template te halen en moet daarom alvast aangemaakt worden
 
-
     events: {
         "click a": 'chooseDriver'                                       //Als er op een linkje binnen het element geklikt wordt, ga dan naar de chooseDriver functie
     },
@@ -69,9 +68,9 @@ site.views.DriverAndCar = Backbone.View.extend({
      * @param options
      */
 
-    errorHandler : function(collection, response, options){
+    errorHandler: function (collection, response, options) {
         templateData = {
-            errorMessage : "Er is iets misgegaan met het ophalen van de gegevens"       //Vul de variabele voor de foutmelding
+            errorMessage: "Er is iets misgegaan met het ophalen van de gegevens"       //Vul de variabele voor de foutmelding
         };
 
         var template = _.template(this.errorTemplate.html(), templateData, this);       //Selecteer de template en stop de data erin

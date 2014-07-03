@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Formula 1 - Javascript Edition</title>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -35,7 +34,8 @@
 
         <!--Deze template wordt gebruikt om de uiteindelijke tijd te laten zien-->
         <script type="text/template" id="time-template">
-            <p>Je tijd is: <%= minutes %>:<%= seconds %></p>
+            <p>Je tijd als <%= driver %> op <%= tyres %> in <%= weatherText %> weer is: </p>
+            <p><%= minutes %>:<%= seconds %></p>
         </script>
 
         <!--Deze template wordt gebruikt om een eventuele error te laten zien-->
@@ -53,17 +53,17 @@
         <div id="F1-tyres">
             <p>Banden</p>
 
-            <a href="#" data-tyre="Option">Option</a>
-            <a href="#" data-tyre="Prime">Prime</a>
-            <a href="#" data-tyre="Intermediate">Intermediate</a>
-            <a href="#" data-tyre="Wet">Wet</a>
+            <a href="#" data-tyre="option">Option</a>
+            <a href="#" data-tyre="primes">Prime</a>
+            <a href="#" data-tyre="intermediates">Intermediate</a>
+            <a href="#" data-tyre="wets">Wet</a>
         </div>
 
         <!--De lijst met weertypes-->
         <div id="F1-weather">
             <p>Weer</p>
-            <a href="#" data-weather="Droog">Droog</a>
-            <a href="#" data-weather="Regen">Regen</a>
+            <a href="#" data-weather="droog">Droog</a>
+            <a href="#" data-weather="nat">Regen</a>
         </div>
 
         <!--Het circuit-->
