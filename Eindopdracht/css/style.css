@@ -1,0 +1,109 @@
+body, h1 {
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#wrapper {
+    height : 650px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: lightgrey;
+    margin: 0 auto;
+}
+
+hr {
+    width: 80%;
+
+}
+
+#container {
+    margin-left: 5%;
+}
+
+/***************************/
+/*****LIJST MET COUREURS****/
+/***************************/
+#F1-drivers {
+    max-width: 35%;
+    margin-left: 3%;
+    float: left;
+    text-align: left;
+}
+
+
+#F1-drivers p {
+    font-weight: bold;
+}
+
+#F1-drivers p:not(:first-child){
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+
+/***************************/
+/******LIJST MET BANDEN*****/
+/***************************/
+
+#F1-tyres {
+    float: left;
+    max-width: 5%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+#F1-tyres p {
+    font-weight: bold;
+}
+
+/***************************/
+/*******LIJST MET WEER******/
+/***************************/
+
+#F1-weather {
+    float: left;
+    max-width: 5%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+#F1-weather p {
+    font-weight: bold;
+}
+
+/***************************/
+/********HET CIRCUIT********/
+/***************************/
+
+#F1-circuit {
+    max-width: 35%;
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+}
+
+#F1-circuit img{
+    width: 300px;
+    height: 200px;
+    margin-top: 7%;
+}
+
+#F1-circuit p {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/***************************/
+/******TIJD BEREKENEN*******/
+/***************************/
+
+#F1-time {
+    font-weight: bold;
+    float: left;
+    background-color: orangered;
+    width: 95%;
+    margin-top: 20px;
+}

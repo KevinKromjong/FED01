@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formula 1 - Javascript Edition</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <h1>Formula 1 - Javascript Edition</h1>
+
+    <p>Kies een coureur, het goede type banden en het weer en kijk of jij de snelste tijd neerzet!</p>
+    <hr/>
+
+    <div id="container">
+
+        <!--Deze template wordt gebruikt om de coureurs te laten zien-->
+        <script type="text/template" id="drivers-template">
+            <p>
+                <a href="#" data-driver='<%= driverName %>' data-number='<%= driverNumber %>'><%= driverName %> - <%=
+                    driverTeam %></a>
+            </p>
+        </script>
+
+        <!--Deze template wordt gebruikt om de circuits te laten zien-->
+        <script type="text/template" id="circuit-template">
+            <p>
+                <%= circuitName %>
+            </p>
+
+            <img src="<%= circuitImage %>">
+        </script>
+
+        <!--Deze template wordt gebruikt om de uiteindelijke tijd te laten zien-->
+        <script type="text/template" id="time-template">
+            <p>Je tijd is: <%= minutes %>:<%= seconds %></p>
+        </script>
+
+        <!--Deze template wordt gebruikt om een eventuele error te laten zien-->
+        <script type="text/template" id="error-template">
+            <p><%= errorMessage %></p>
+        </script>
+
+
+        <!--De lijst met coureurs-->
+        <div id="F1-drivers">
+            <p>Coureur & Team</p>
+        </div>
+
+        <!--De lijst met banden-->
+        <div id="F1-tyres">
+            <p>Banden</p>
+
+            <a href="#" data-tyre="Option">Option</a>
+            <a href="#" data-tyre="Prime">Prime</a>
+            <a href="#" data-tyre="Intermediate">Intermediate</a>
+            <a href="#" data-tyre="Wet">Wet</a>
+        </div>
+
+        <!--De lijst met weertypes-->
+        <div id="F1-weather">
+            <p>Weer</p>
+            <a href="#" data-weather="Droog">Droog</a>
+            <a href="#" data-weather="Regen">Regen</a>
+        </div>
+
+        <!--Het circuit-->
+        <div id="F1-circuit">
+        </div>
+
+        <!--De uiteindelijke tijd-->
+        <div id="F1-time">
+            <p>Kies uit de drie onderdelen hierboven en check hier je tijd!</p>
+        </div>
+    </div>
+
+</div>
+
+<!--De drie libraries die noodzakelijk zijn worden hier geladen-->
+<script src="js/libs/jquery-2.1.0.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/backbone.js"></script>
+
+<!--Eerst wordt de init geladen, zodat de noodzakelijke objecten aangemaakt worden-->
+<script src="js/init.js"></script>
+
+<!--Daarna wordt het model aangemaakt-->
+<script src="js/models/DriverAndCarModel.js"></script>
+
+<!--De collections gebruiken een model, dus deze worden hierna aangemaakt-->
+<script src="js/collections/DriverAndCarCollection.js"></script>
+<script src="js/collections/CircuitCollection.js"></script>
+
+<!--De views gebruiken de collections, dus deze komen hierna-->
+<script src="js/views/DriverAndCar.js"></script>
+<script src="js/views/Circuit.js"></script>
+<script src="js/views/Weather.js"></script>
+<script src="js/views/Tyres.js"></script>
+<script src="js/views/Time.js"></script>
+
+<!--Als laatste komt de main, aangezien deze de views instantieert en deze dus views, collections en models nodig heeft-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
